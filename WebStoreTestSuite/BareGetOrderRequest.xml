@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8f2001a2-4076-47e5-a432-c71b0ab8326e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="BareGetOrderRequest" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8f2001a2-4076-47e5-a432-c71b0ab8326efileName">BareGetOrderRequest</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="GET Request" id="cbb3faa6-e004-40ba-9af3-f92689fdd43d">
+    <con:settings/>
+    <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/get_order/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Request" id="23471b47-5c7c-493c-86eb-f012c320debf" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/shoppingcart/get_order/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="3665ef0f-6622-49cf-ba23-df70236c5830" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Dermot@Localhost</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="type" value="json"/>
+          <con:entry key="order_id" value="40"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

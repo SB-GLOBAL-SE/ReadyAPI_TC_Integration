@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4056c2c2-3736-4331-a64e-8b0bf5d80ef1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="/shoppingcart/service_creditcard.php-Request 1 TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4056c2c2-3736-4331-a64e-8b0bf5d80ef1fileName">%2Fshoppingcart%2Fservice_creditcard.php-Request-1-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="POST Request" id="8954d07f-5e6e-407a-9ef4-a584246f76b0">
+    <con:settings/>
+    <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/shoppingcart/service_creditcard.php" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="POST Request" id="6e8a17cd-0496-472d-8729-b1f62da3cec3" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>http://localhost</con:endpoint>
+        <con:request>{\r
+  "id" : 33,\r
+  "action" : "placeOrdercc",\r
+  "cc_money" : 798.0,\r
+  "cc_name" : "S S",\r
+  "cc_number" : 0,\r
+  "cc_exp_mo" : 1,\r
+  "cc_exp_yr" : 2018,\r
+  "cc_cvv" : 123\r
+}</con:request>
+        <con:originalUri>http://localhost/shoppingcart/shoppingcart/service_creditcard.php</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0fdcc77e-b266-4a74-ba80-dc1deb3c8faa" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SwaggerComplianceAssertion" id="c6c42110-8e32-4382-8685-97e8da307843" name="Swagger Compliance Assertion">
+          <con:configuration>
+            <swaggerUrl>https://raw.githubusercontent.com/sankeths/Swagger/SWAGGERHUB/yaml-resolved/shoppingcart.yaml</swaggerUrl>
+            <strictMode>true</strictMode>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="fa6c0c00-1c55-4ce1-b5f5-1bd0dd7ef3b9" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

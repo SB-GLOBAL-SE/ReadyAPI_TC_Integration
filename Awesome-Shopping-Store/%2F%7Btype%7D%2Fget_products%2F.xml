@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/{type}/get_products/" path="/{type}/get_products/" id="8a3f675a-7a35-4653-b2d7-540e75529c6e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8a3f675a-7a35-4653-b2d7-540e75529c6efileName">%2F%7Btype%7D%2Fget_products%2F</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>type</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>json or xml</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="GET" id="5769c513-5cc3-4793-b0db-8d6f9f2e6e2c" method="GET">
+    <con:description>Get list of all products</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "id" : 1,
+  "name" : "iPhone",
+  "description" : "This is an rare iphone",
+  "image" : "iphone.jpg",
+  "price" : 999.0,
+  "created" : "2018-05-05T00:00:00.000+0000",
+  "modified" : "2018-05-05T00:00:00.000+0000",
+  "status" : 0
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<object>
+   <AnonymousModel>
+      <id>1</id>
+      <name>iPhone</name>
+      <description>This is an rare iphone</description>
+      <image>iphone.jpg</image>
+      <price>999.0</price>
+      <created>2018-05-05T00:00:00.000+0000</created>
+      <modified>2018-05-05T00:00:00.000+0000</modified>
+      <status>0</status>
+   </AnonymousModel>
+</object>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="c3e2fea7-a5e8-4400-9412-55039e735ddf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

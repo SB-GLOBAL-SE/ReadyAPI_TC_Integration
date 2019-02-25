@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/shoppingcart/service_creditcard.php" path="/shoppingcart/service_creditcard.php" id="7a7bc167-4f5c-4ddf-ac21-477df3e17296" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7a7bc167-4f5c-4ddf-ac21-477df3e17296fileName">%2Fshoppingcart%2Fservice_creditcard.php</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="POST" id="72c99141-dd38-400c-b984-fcfc8df68e55" method="POST">
+    <con:description>External Service to make Creditcard payments</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : 33,
+  "action" : "placeOrdercc",
+  "cc_money" : 798.0,
+  "cc_name" : "S S",
+  "cc_number" : 0,
+  "cc_exp_mo" : 1,
+  "cc_exp_yr" : 2018,
+  "cc_cvv" : 123
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "Status" : "Transaction Approved",
+  "Status Code" : 100,
+  "Reason" : "Approved"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="6e8a17cd-0496-472d-8729-b1f62da3cec3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost</con:endpoint>
+      <con:request>{\r
+  "id" : 33,\r
+  "action" : "placeOrdercc",\r
+  "cc_money" : 798.0,\r
+  "cc_name" : "S S",\r
+  "cc_number" : 0,\r
+  "cc_exp_mo" : 1,\r
+  "cc_exp_yr" : 2018,\r
+  "cc_cvv" : 123\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,14 @@
+Awesome-Shopping-Store\%2F%7Btype%7D%2Fget_login%2F.xml
+Awesome-Shopping-Store\%2F%7Btype%7D%2Fget_products%2F.xml
+Awesome-Shopping-Store\%2F%7Btype%7D%2Fget_orders%2F.xml
+Awesome-Shopping-Store\%2F%7Btype%7D%2Fpost_order%2F.xml
+Awesome-Shopping-Store\%2F%7Btype%7D%2Fget_order%2F.xml
+Awesome-Shopping-Store\%2Fshoppingcart%2Fservice_creditcard.php.xml
+WebStoreTestSuite\BareGetOrderRequest.xml
+WebStoreTestSuite\TestComplete-GetOrder.xml
+WebStoreTestSuite\%2F%7Btype%7D%2Fget_login%2F-Request-1-TestCase.xml
+WebStoreTestSuite\%2F%7Btype%7D%2Fget_products%2F-Request-1-TestCase.xml
+WebStoreTestSuite\%2F%7Btype%7D%2Fget_orders%2F-Request-1-TestCase.xml
+WebStoreTestSuite\%2F%7Btype%7D%2Fpost_order%2F-Request-1-TestCase.xml
+WebStoreTestSuite\%2F%7Btype%7D%2Fget_order%2F-Request-1-TestCase.xml
+WebStoreTestSuite\%2Fshoppingcart%2Fservice_creditcard.php-Request-1-TestCase.xml
