@@ -28,7 +28,7 @@
         <con:jmsPropertyConfig/>
         <con:parameters>
           <con:entry key="type" value="json"/>
-          <con:entry key="order_id" value="41"/>
+          <con:entry key="order_id" value="40"/>
         </con:parameters>
       </con:restRequest>
     </con:config>
