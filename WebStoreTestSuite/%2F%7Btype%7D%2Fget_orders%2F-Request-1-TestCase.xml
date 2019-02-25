@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b292f126-f83e-4cd6-a8df-09eb80ff8525" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="/{type}/get_orders/-Request 1 TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b292f126-f83e-4cd6-a8df-09eb80ff8525fileName">%2F%7Btype%7D%2Fget_orders%2F-Request-1-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GET Request" id="4bfed01c-8628-4b48-a525-8fddd4a89dac">
+    <con:settings/>
+    <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/get_orders/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Request" id="e16bfd42-e0da-41d0-85a7-138afbfb455c" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>http://localhost</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/shoppingcart/get_orders/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="2401b4f5-26b2-4ff9-ad93-03f30edea590" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SwaggerComplianceAssertion" id="4cdfdbf0-3eae-4063-8ab8-3d4d158246b1" name="Swagger Compliance Assertion">
+          <con:configuration>
+            <swaggerUrl>https://raw.githubusercontent.com/sankeths/Swagger/SWAGGERHUB/yaml-resolved/shoppingcart.yaml</swaggerUrl>
+            <strictMode>true</strictMode>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="2906ebd5-0f97-469e-99b4-589799486dcb" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

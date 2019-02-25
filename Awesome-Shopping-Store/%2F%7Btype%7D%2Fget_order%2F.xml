@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/{type}/get_order/" path="/{type}/get_order/" id="5e88cb88-b7f3-48f1-8c5c-3b0a8f04d6ad" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5e88cb88-b7f3-48f1-8c5c-3b0a8f04d6adfileName">%2F%7Btype%7D%2Fget_order%2F</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>type</con:name>
+      <con:style>TEMPLATE</con:style>
+      <con:description>json or xml</con:description>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="GET" id="92649d64-4147-462a-8505-846cee64dafb" method="GET">
+    <con:description>Get order details</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>order_id</con:name>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:description>Order Id</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "id" : 1,
+  "customer_id" : 1,
+  "name" : "Iphone",
+  "total_price" : 999.0,
+  "status" : 0,
+  "order_id" : 1,
+  "quantity" : 1,
+  "price" : 1.0,
+  "paymenttype" : "card"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/xml</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent><![CDATA[<object>
+   <AnonymousModel>
+      <id>1</id>
+      <customer_id>1</customer_id>
+      <name>Iphone</name>
+      <total_price>999.0</total_price>
+      <status>0</status>
+      <order_id>1</order_id>
+      <quantity>1</quantity>
+      <price>1.0</price>
+      <paymenttype>card</paymenttype>
+   </AnonymousModel>
+</object>]]></con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="23471b47-5c7c-493c-86eb-f012c320debf" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>http://localhost</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

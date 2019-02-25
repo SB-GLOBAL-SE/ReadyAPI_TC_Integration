@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="0355f33a-0f42-4937-8619-e3842f756e55" created="2.6.0" activeEnvironment="Default environment" name="Project 1" resourceRoot="" compositeProjectFormat="1.3" updated="2.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="5dca8fc7-2b47-471a-ae5a-b9509066e0d9" created="2.6.0" activeEnvironment="Default environment" name="TestCompleteIntegrationProject" resourceRoot="" updated="2.6.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="0355f33a-0f42-4937-8619-e3842f756e55fileName">Project-1</con:setting>
+    <con:setting id="5dca8fc7-2b47-471a-ae5a-b9509066e0d9fileName">TestCompleteIntegrationProject</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:properties/>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>input_username</con:name>
+      <con:value>dermot@localhost</con:value>
+    </con:property>
+    <con:property>
+      <con:name>input_password</con:name>
+      <con:value>password</con:value>
+    </con:property>
+    <con:property>
+      <con:name>input_orderID</con:name>
+      <con:value>40</con:value>
+    </con:property>
+    <con:property>
+      <con:name>output_productName</con:name>
+      <con:value>Xbox</con:value>
+    </con:property>
+  </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to SoapUI Pro tests
@@ -40,6 +57,14 @@
 // pw.close()
 // fos.close()</con:script>
   </con:eventHandlers>
-  <con:authRepository/>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>Dermot@Localhost</con:name>
+      <con:type>Basic</con:type>
+      <con:username>dermot@localhost</con:username>
+      <con:password>password</con:password>
+      <con:preemptive>false</con:preemptive>
+    </con:basicAuthEntry>
+  </con:authRepository>
   <con:tags/>
 </con:soapui-project>

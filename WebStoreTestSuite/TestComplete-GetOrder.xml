@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="6a1f5041-e028-4390-a6ee-86a9eabb9a30" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestComplete-GetOrder" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6a1f5041-e028-4390-a6ee-86a9eabb9a30fileName">TestComplete-GetOrder</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="GET Request" id="9fa84aef-0b18-4487-9ed5-a058366b5d88">
+    <con:settings/>
+    <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/get_order/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GET Request" id="23471b47-5c7c-493c-86eb-f012c320debf" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://localhost/shoppingcart/get_order/</con:originalUri>
+        <con:assertion type="Simple Contains" id="b8d9659b-1e78-4356-a6fe-0fef469b04c1" name="Contains">
+          <con:configuration>
+            <token>${#Project#output_productName}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>${#Project#input_username}</con:username>
+          <con:password>${#Project#input_password}</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="type" value="json"/>
+          <con:entry key="order_id" value="${#Project#input_orderID}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
