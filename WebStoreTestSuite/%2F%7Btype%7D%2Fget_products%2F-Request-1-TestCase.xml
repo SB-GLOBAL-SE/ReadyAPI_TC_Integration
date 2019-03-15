@@ -20,16 +20,19 @@
             <codes>200</codes>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="SwaggerComplianceAssertion" id="4d50f842-f76e-46ce-a8c1-af607f7ccd38" name="Swagger Compliance Assertion">
+        <con:assertion type="SwaggerComplianceAssertion" id="4d50f842-f76e-46ce-a8c1-af607f7ccd38" name="Swagger Compliance Assertion" disabled="true">
           <con:configuration>
             <swaggerUrl>https://raw.githubusercontent.com/sankeths/Swagger/SWAGGERHUB/yaml-resolved/shoppingcart.yaml</swaggerUrl>
             <strictMode>true</strictMode>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="Response SLA Assertion" id="c4039378-695e-4cd3-b8ac-30c35495f9cc" name="Response SLA">
+        <con:assertion type="Response SLA Assertion" id="c4039378-695e-4cd3-b8ac-30c35495f9cc" name="Response SLA" disabled="true">
           <con:configuration>
             <SLA>200</SLA>
           </con:configuration>
+        </con:assertion>
+        <con:assertion type="GroovyScriptAssertion" id="2a0d90fa-9bf6-4925-8f3e-510fbd89ce96" name="Script Assertion">
+          <con:configuration/>
         </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>Dermot@Localhost</con:selectedAuthProfile>

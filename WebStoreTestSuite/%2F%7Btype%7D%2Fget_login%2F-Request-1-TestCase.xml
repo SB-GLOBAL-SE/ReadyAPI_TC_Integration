@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="e012b22c-1ba6-4f9e-a2c4-bdf831e2001cfileName">%2F%7Btype%7D%2Fget_login%2F-Request-1-TestCase</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="GET Request" id="6c012e4a-ca0f-4041-9fdd-a7ffaf0b4459">
     <con:settings/>
     <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/get_login/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
