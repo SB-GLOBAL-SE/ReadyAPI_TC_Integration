@@ -3,11 +3,14 @@
   <con:settings>
     <con:setting id="b292f126-f83e-4cd6-a8df-09eb80ff8525fileName">%2F%7Btype%7D%2Fget_orders%2F-Request-1-TestCase</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="GET Request" id="4bfed01c-8628-4b48-a525-8fddd4a89dac">
     <con:settings/>
     <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/get_orders/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GET Request" id="e16bfd42-e0da-41d0-85a7-138afbfb455c" mediaType="application/json">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:endpoint>http://localhost</con:endpoint>
         <con:request/>
         <con:originalUri>http://localhost/shoppingcart/get_orders/</con:originalUri>
@@ -32,7 +35,10 @@
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
-        <con:parameters/>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="type" value="json" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
       </con:restRequest>
     </con:config>
   </con:testStep>

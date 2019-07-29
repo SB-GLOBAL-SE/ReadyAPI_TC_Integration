@@ -3,10 +3,11 @@
   <con:settings>
     <con:setting id="ad067a6a-69ff-46e9-b6e9-7a29ee331a08fileName">%2F%7Btype%7D%2Fpost_order%2F-Request-1-TestCase</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="POST Request" id="9423934a-f09d-4302-8a84-4dbfac8bb641">
     <con:settings/>
     <con:config service="Awesome Shopping Store" resourcePath="/shoppingcart/{type}/post_order/" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="POST Request" id="76a8409e-a7c3-4208-b654-74b4eb9d1434" mediaType="application/json">
+      <con:restRequest name="POST Request" id="76a8409e-a7c3-4208-b654-74b4eb9d1434" mediaType="application/json" postQueryString="false">
         <con:settings/>
         <con:endpoint>http://localhost</con:endpoint>
         <con:request>{ }</con:request>
@@ -32,6 +33,7 @@
           <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters/>
       </con:restRequest>
     </con:config>
